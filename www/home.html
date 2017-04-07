@@ -1,0 +1,112 @@
+<ion-view view-title="Progress Page" cache-view="false">
+
+  <ion-content has-header="true" padding="true">
+
+<!--
+    <div class="button-bar">
+      <a class="button" ng-click="updateProgressbar()">progress</a>
+    </div> -->
+    <ion-item> 
+      <ion-row>
+        <ion-col width-5> 
+            <ion-avatar> 
+            <img src = "img/patient.png" height="50px" weight="50px">
+        </ion-avatar>
+        </ion-col> 
+        <ion-col width-75> 
+          <label style = "color : blue; font-weight: bold; font-size : 120%; font-family: "sans-serif"; for = "TB1" > Thiết bị A1</label>
+        </ion-col>
+      </ion-row>
+      <br></br>
+      <button class="button icon-left ion-gear-a button-positive"; ng-click="edit()";> Chỉnh sửa thông tin</button>
+        <br> </br>
+
+      <a class="item item-icon-left" href="#">
+        <i class="icon ion-wifi"></i>
+        Trạng Thái
+        <span class="badge badge-balanced"> Đã kết nối </span>
+
+      </a>
+
+      <a class="item item-icon-left" href="#">
+        <i class="icon ion-ios-person"></i>
+        Tên bệnh nhân
+        <span class="item-note"; style="font-weight: bold; color : blue";> {{name1}}</span>
+
+      </a>
+
+      <a class="item item-icon-left" href="#">
+        <i class="icon ion-ios-location"></i>
+          Phòng/Giường
+        <span class="item-note"; style="color : black";>
+          A123
+        </span>
+      </a>
+
+      <a class="item item-icon-left" href="#">
+        <i class="icon ion-information-circled"></i>
+          Tên dịch truyền
+        <span class="item-note"; style="color : black";>
+          ABC
+        </span>
+      </a>
+
+      <a class="item item-icon-left" href="#">
+        <i class="icon ion-clock"; style="color : green;"></i>
+          Thời gian bắt đầu
+        <span class="item-note" ; style="color : black";>
+          {{ st1 }}
+        </span>
+      </a>
+
+      <a class="item item-icon-left" href="#">
+        <i class="icon ion-clock"; style="color : red;"></i>
+          Thời gian kết thúc (dự kiến)
+        <span class="item-note"; style="color : black";>
+          {{ et1 }}
+        </span>
+      </a>
+      
+      <a class="item item-icon-left" href="#">
+        <i class="icon ion-speedometer"></i>
+          Tốc độ truyền dịch
+        <span class="item-note"; style="color : black";>
+          {{ speed1 }}ml/min
+        </span>
+      </a>
+        
+        <progress id="progressbar1" max="100" value="{{ progressval1 }}"> </progress>
+        <div id="progressbarlabel1">{{ progressval1 }} %</div>
+
+    </ion-item>
+
+    <br> </br>
+
+    <ion-item> 
+      <ion-row>
+        <ion-col width-5> 
+            <ion-avatar> 
+            <img src = "img/patient.png" height="50px" weight="50px">
+        </ion-avatar>
+        </ion-col> 
+        <ion-col width-95> 
+          <label style = "color : red; font-weight: bold; font-size : 120%; font-family: "sans-serif"; for = "TB1" > Thiết bị A2</label>
+        </ion-col>
+      </ion-row>
+        <br> </br>
+        
+        <a class="item item-icon-left" href="#">
+            <i class="icon ion-wifi"></i>
+              Trạng Thái
+            <span class="badge badge-assertive"> Chưa kết nối </span>
+        </a>
+
+        <progress id="progressbar1" max="100" value="{{ progressval2 }}"> </progress>
+        <div id="progressbarlabel1">0%</div>
+
+    </ion-item>    
+
+
+  </ion-content>
+  
+</ion-view>
