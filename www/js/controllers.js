@@ -32,7 +32,7 @@ angular.module('starter.controllers',[])
     $scope.speed1 = "5";
     $scope.st1 = "12:00  1-1-2100";
     $scope.et1 = "16:00  1-1-2100";
-    $scope.progressval1 = 70; //set progressval1 to test 
+    //$scope.progressval1 = 70; //set progressval1 to test 
     $scope.url1 = "http://172.29.192.79/info";
     //$scope.t0 = new Datetime()/1000;
     $scope.date = new Date();
@@ -91,4 +91,9 @@ angular.module('starter.controllers',[])
       xmlHttp.send( null );
       return xmlHttp.responseText;
   }
+
+
 });
+
+
+
